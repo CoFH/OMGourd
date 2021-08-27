@@ -25,16 +25,16 @@ public class OMGRecipeProvider extends RecipeProviderCoFH {
     }
 
     @Override
-    protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
+    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
 
         for (int i = 1; i <= 24; ++i) {
-            ShapedRecipeBuilder.shapedRecipe(ITEMS.get("jack_o_lantern_" + i))
-                    .key('A', ITEMS.get("carved_pumpkin_" + i))
-                    .key('B', Items.TORCH)
-                    .patternLine("A")
-                    .patternLine("B")
-                    .addCriterion("has_carved_pumpkin", hasItem(Items.CARVED_PUMPKIN))
-                    .build(consumer);
+            ShapedRecipeBuilder.shaped(ITEMS.get("jack_o_lantern_" + i))
+                    .define('A', ITEMS.get("carved_pumpkin_" + i))
+                    .define('B', Items.TORCH)
+                    .pattern("A")
+                    .pattern("B")
+                    .unlockedBy("has_carved_pumpkin", has(Items.CARVED_PUMPKIN))
+                    .save(consumer);
         }
     }
 

@@ -30,7 +30,7 @@ public class CommonEvents {
     //            return;
     //        }
     //        FishingBobberEntity hook = player.fishingBobber;
-    //        Entity entity = hook.func_234607_k_();
+    //        Entity entity = hook.getHookedIn();
     //
     //        if (entity instanceof PlayerEntity && !PilferingEnchantment.allowPlayerStealing) {
     //            return;
