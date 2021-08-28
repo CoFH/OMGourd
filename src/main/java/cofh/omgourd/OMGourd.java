@@ -1,7 +1,6 @@
 package cofh.omgourd;
 
 import cofh.core.block.CarvedPumpkinBlockCoFH;
-import cofh.core.init.CoreItems;
 import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.omgourd.init.OMGBlocks;
 import cofh.omgourd.init.OMGConfig;
@@ -46,7 +45,6 @@ public class OMGourd {
 
         OMGBlocks.register();
 
-        CoreItems.registerShearsOverride();
         CarvedPumpkinBlockCoFH.updatePredicate();
     }
 
