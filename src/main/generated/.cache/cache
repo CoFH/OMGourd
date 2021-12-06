@@ -46,7 +46,7 @@ c6eafec7ad73f3d98c6fc426bc906465314d6bd3 assets/omgourd/models/item/jack_o_lante
 76be2fe29a39df21b78957611e2e0b87e6cfb3a2 assets/omgourd/models/item/jack_o_lantern_7.json
 23ac23670900affbefe9a4e25b30f11ac0677abf assets/omgourd/models/item/jack_o_lantern_8.json
 d3d454df39de54ccc10eb16380ecfdee93f035c6 assets/omgourd/models/item/jack_o_lantern_9.json
-284f92048c800e8fe257d4ccdb2c23cfed1961cd data/forge/tags/blocks/pumpkin/carved.json
+284f92048c800e8fe257d4ccdb2c23cfed1961cd data/forge/tags/blocks/pumpkins/carved.json
 284f92048c800e8fe257d4ccdb2c23cfed1961cd data/forge/tags/items/pumpkins/carved.json
 6993f46ffe5fd8d86dc398027ba6ee10e052f707 data/omgourd/loot_tables/blocks/carved_pumpkin_1.json
 60cd3d818519f428af10c7ee9495f6483e739ac5 data/omgourd/loot_tables/blocks/carved_pumpkin_10.json
