@@ -10,6 +10,7 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemGroup;
 
 import static cofh.omgourd.OMGourd.BLOCKS;
 import static cofh.omgourd.OMGourd.ITEMS;
@@ -30,8 +31,8 @@ public class OMGBlocks {
             BLOCKS.register("jack_o_lantern_" + i, () -> new CarvedPumpkinBlockCoFH(of(Material.VEGETABLE, MaterialColor.COLOR_ORANGE).strength(1.0F).sound(SoundType.WOOD).lightLevel(BlockHelper.lightValue(15))).setTranslationKey("block.minecraft.jack_o_lantern"));
 
             int j = i;
-            ITEMS.register("carved_pumpkin_" + j, () -> new BlockItemCoFH(BLOCKS.get("carved_pumpkin_" + j), new Item.Properties()).setDisplayGroup(() -> OMGourd.itemGroup));
-            ITEMS.register("jack_o_lantern_" + j, () -> new BlockItemCoFH(BLOCKS.get("jack_o_lantern_" + j), new Item.Properties()).setDisplayGroup(() -> OMGourd.itemGroup));
+            ITEMS.register("carved_pumpkin_" + j, () -> new BlockItemCoFH(BLOCKS.get("carved_pumpkin_" + j), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)).setDisplayGroup(() -> OMGourd.itemGroup));
+            ITEMS.register("jack_o_lantern_" + j, () -> new BlockItemCoFH(BLOCKS.get("jack_o_lantern_" + j), new Item.Properties().tab(ItemGroup.TAB_BUILDING_BLOCKS)).setDisplayGroup(() -> OMGourd.itemGroup));
         }
     }
 

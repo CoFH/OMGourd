@@ -1,5 +1,6 @@
 package cofh.omgourd.event;
 
+import cofh.lib.item.impl.KnifeItem;
 import cofh.lib.util.Utils;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraft.block.Block;
@@ -63,7 +64,7 @@ public class CommonEvents {
         Block block = world.getBlockState(pos).getBlock();
 
         ItemStack heldStack = player.getItemInHand(event.getHand());
-        if (heldStack.getItem() instanceof ShearsItem) {
+        if (heldStack.getItem() instanceof ShearsItem || heldStack.getItem() instanceof KnifeItem) {
             Block newBlock = player.isSecondaryUseActive() ? CARVE_PREV_MAP.get(block) : CARVE_NEXT_MAP.get(block);
             if (newBlock != null) {
                 if (Utils.isClientWorld(world)) {
