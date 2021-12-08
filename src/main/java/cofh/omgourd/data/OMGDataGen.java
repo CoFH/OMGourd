@@ -1,6 +1,7 @@
 package cofh.omgourd.data;
 
 import net.minecraft.data.DataGenerator;
+import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.GatherDataEvent;
@@ -14,22 +15,33 @@ public class OMGDataGen {
     public static void gatherData(final GatherDataEvent event) {
 
         if (event.includeServer()) {
-            registerServerProviders(event.getGenerator());
+            registerServerProviders(event);
         }
         if (event.includeClient()) {
-            registerClientProviders(event.getGenerator(), event);
+            registerClientProviders(event);
         }
     }
 
-    private static void registerServerProviders(DataGenerator generator) {
+    private static void registerServerProviders(GatherDataEvent event) {
 
-        generator.addProvider(new OMGLootTableProvider(generator));
-        generator.addProvider(new OMGRecipeProvider(generator));
+        DataGenerator gen = event.getGenerator();
+        ExistingFileHelper exFileHelper = event.getExistingFileHelper();
+
+        OMGTagsProvider.Block blockTags = new OMGTagsProvider.Block(gen, exFileHelper);
+
+        gen.addProvider(blockTags);
+        gen.addProvider(new OMGTagsProvider.Item(gen, blockTags, exFileHelper));
+
+        gen.addProvider(new OMGLootTableProvider(gen));
+        gen.addProvider(new OMGRecipeProvider(gen));
     }
 
-    private static void registerClientProviders(DataGenerator generator, GatherDataEvent event) {
+    private static void registerClientProviders(GatherDataEvent event) {
 
-        generator.addProvider(new OMGItemModelProvider(generator, event.getExistingFileHelper()));
+        DataGenerator gen = event.getGenerator();
+        ExistingFileHelper exFileHelper = event.getExistingFileHelper();
+
+        gen.addProvider(new OMGItemModelProvider(gen, exFileHelper));
     }
 
 }

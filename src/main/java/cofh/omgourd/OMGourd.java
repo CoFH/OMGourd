@@ -1,7 +1,6 @@
 package cofh.omgourd;
 
 import cofh.core.block.CarvedPumpkinBlockCoFH;
-import cofh.core.init.CoreItems;
 import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.omgourd.init.OMGBlocks;
 import cofh.omgourd.init.OMGConfig;
@@ -46,7 +45,6 @@ public class OMGourd {
 
         OMGBlocks.register();
 
-        CoreItems.registerShearsOverride();
         CarvedPumpkinBlockCoFH.updatePredicate();
     }
 
@@ -63,13 +61,13 @@ public class OMGourd {
 
                 @Override
                 @OnlyIn(Dist.CLIENT)
-                public ItemStack createIcon() {
+                public ItemStack makeIcon() {
 
                     return new ItemStack(ITEMS.get("carved_pumpkin_1"));
                 }
             };
         } else {
-            itemGroup = ItemGroup.BUILDING_BLOCKS;
+            itemGroup = ItemGroup.TAB_BUILDING_BLOCKS;
         }
     }
     // endregion
