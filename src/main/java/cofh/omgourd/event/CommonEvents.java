@@ -17,7 +17,7 @@ import net.minecraftforge.fml.common.Mod;
 
 import static cofh.lib.util.constants.Constants.ID_OMGOURD;
 
-@Mod.EventBusSubscriber(modid = ID_OMGOURD)
+@Mod.EventBusSubscriber (modid = ID_OMGOURD)
 public class CommonEvents {
 
     private static final Object2ObjectOpenHashMap<Block, Block> CARVE_PREV_MAP = new Object2ObjectOpenHashMap<>();

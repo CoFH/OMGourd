@@ -21,7 +21,7 @@ import org.apache.logging.log4j.Logger;
 
 import static cofh.lib.util.constants.Constants.ID_OMGOURD;
 
-@Mod(ID_OMGOURD)
+@Mod (ID_OMGOURD)
 public class OMGourd {
 
     public static final Logger LOG = LogManager.getLogger(ID_OMGOURD);
@@ -60,7 +60,7 @@ public class OMGourd {
             itemGroup = new ItemGroup(-1, ID_OMGOURD) {
 
                 @Override
-                @OnlyIn(Dist.CLIENT)
+                @OnlyIn (Dist.CLIENT)
                 public ItemStack makeIcon() {
 
                     return new ItemStack(ITEMS.get("carved_pumpkin_1"));
