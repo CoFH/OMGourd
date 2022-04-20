@@ -46,12 +46,9 @@ public class CommonEvents {
     }
 
     @SubscribeEvent
-    public static void handlePlayerRightClickEvent(PlayerInteractEvent event) {
+    public static void handlePlayerRightClickEvent(PlayerInteractEvent.RightClickBlock event) {
 
         if (event.isCanceled()) {
-            return;
-        }
-        if (!(event instanceof PlayerInteractEvent.RightClickBlock)) {
             return;
         }
         World world = event.getWorld();
