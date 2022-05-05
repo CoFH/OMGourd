@@ -4,10 +4,10 @@ import cofh.core.block.CarvedPumpkinBlockCoFH;
 import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.omgourd.init.OMGBlocks;
 import cofh.omgourd.init.OMGConfig;
-import net.minecraft.block.Block;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.block.Block;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -29,7 +29,7 @@ public class OMGourd {
     public static final DeferredRegisterCoFH<Block> BLOCKS = DeferredRegisterCoFH.create(ForgeRegistries.BLOCKS, ID_OMGOURD);
     public static final DeferredRegisterCoFH<Item> ITEMS = DeferredRegisterCoFH.create(ForgeRegistries.ITEMS, ID_OMGOURD);
 
-    public static ItemGroup itemGroup;
+    public static CreativeModeTab itemGroup;
 
     public OMGourd() {
 
@@ -57,7 +57,7 @@ public class OMGourd {
     private void clientSetup(final FMLClientSetupEvent event) {
 
         if (OMGConfig.enableCreativeTab.get()) {
-            itemGroup = new ItemGroup(-1, ID_OMGOURD) {
+            itemGroup = new CreativeModeTab(-1, ID_OMGOURD) {
 
                 @Override
                 @OnlyIn (Dist.CLIENT)
@@ -67,7 +67,7 @@ public class OMGourd {
                 }
             };
         } else {
-            itemGroup = ItemGroup.TAB_BUILDING_BLOCKS;
+            itemGroup = CreativeModeTab.TAB_BUILDING_BLOCKS;
         }
     }
     // endregion

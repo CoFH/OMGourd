@@ -6,6 +6,7 @@ import net.minecraftforge.common.ForgeConfigSpec.Builder;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
+import net.minecraftforge.fml.event.config.ModConfigEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 public class OMGConfig {
@@ -71,7 +72,7 @@ public class OMGConfig {
 
     // region CONFIGURATION
     @SubscribeEvent
-    public static void configLoading(final ModConfig.Loading event) {
+    public static void configLoading(ModConfigEvent.Loading event) {
 
         switch (event.getConfig().getType()) {
             case CLIENT:
@@ -83,7 +84,7 @@ public class OMGConfig {
     }
 
     @SubscribeEvent
-    public static void configReloading(final ModConfig.Reloading event) {
+    public static void configReloading(ModConfigEvent.Reloading event) {
 
         switch (event.getConfig().getType()) {
             case CLIENT:

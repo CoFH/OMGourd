@@ -3,14 +3,14 @@ package cofh.omgourd.event;
 import cofh.lib.item.impl.KnifeItem;
 import cofh.lib.util.Utils;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
-import net.minecraft.block.Block;
-import net.minecraft.block.CarvedPumpkinBlock;
-import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ShearsItem;
-import net.minecraft.util.Direction;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.World;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ShearsItem;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.CarvedPumpkinBlock;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -51,12 +51,12 @@ public class CommonEvents {
         if (event.isCanceled()) {
             return;
         }
-        World world = event.getWorld();
+        Level world = event.getWorld();
         Direction face = event.getFace();
         if (face == null) {
             return;
         }
-        PlayerEntity player = event.getPlayer();
+        Player player = event.getPlayer();
         BlockPos pos = event.getPos();
         Block block = world.getBlockState(pos).getBlock();
 

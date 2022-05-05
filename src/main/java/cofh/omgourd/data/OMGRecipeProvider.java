@@ -2,9 +2,9 @@ package cofh.omgourd.data;
 
 import cofh.lib.data.RecipeProviderCoFH;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.IFinishedRecipe;
-import net.minecraft.data.ShapedRecipeBuilder;
-import net.minecraft.item.Items;
+import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.data.recipes.ShapedRecipeBuilder;
+import net.minecraft.world.item.Items;
 
 import java.util.function.Consumer;
 
@@ -25,7 +25,7 @@ public class OMGRecipeProvider extends RecipeProviderCoFH {
     }
 
     @Override
-    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
+    protected void buildCraftingRecipes(Consumer<FinishedRecipe> consumer) {
 
         for (int i = 1; i <= 24; ++i) {
             ShapedRecipeBuilder.shaped(ITEMS.get("jack_o_lantern_" + i))
