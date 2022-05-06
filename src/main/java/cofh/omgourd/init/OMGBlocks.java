@@ -34,6 +34,7 @@ public class OMGBlocks {
             ITEMS.register("carved_pumpkin_" + j, () -> new BlockItemCoFH(BLOCKS.get("carved_pumpkin_" + j), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)).setDisplayGroup(() -> OMGourd.itemGroup));
             ITEMS.register("jack_o_lantern_" + j, () -> new BlockItemCoFH(BLOCKS.get("jack_o_lantern_" + j), new Item.Properties().tab(CreativeModeTab.TAB_BUILDING_BLOCKS)).setDisplayGroup(() -> OMGourd.itemGroup));
         }
+        CarvedPumpkinBlockCoFH.updatePredicate();
     }
 
     public static void setup() {

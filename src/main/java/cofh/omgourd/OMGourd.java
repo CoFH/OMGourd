@@ -1,9 +1,9 @@
 package cofh.omgourd;
 
-import cofh.core.block.CarvedPumpkinBlockCoFH;
+import cofh.lib.config.ConfigManager;
 import cofh.lib.util.DeferredRegisterCoFH;
+import cofh.omgourd.config.OMGClientConfig;
 import cofh.omgourd.init.OMGBlocks;
-import cofh.omgourd.init.OMGConfig;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -25,6 +25,7 @@ import static cofh.lib.util.constants.Constants.ID_OMGOURD;
 public class OMGourd {
 
     public static final Logger LOG = LogManager.getLogger(ID_OMGOURD);
+    public static final ConfigManager CONFIG_MANAGER = new ConfigManager();
 
     public static final DeferredRegisterCoFH<Block> BLOCKS = DeferredRegisterCoFH.create(ForgeRegistries.BLOCKS, ID_OMGOURD);
     public static final DeferredRegisterCoFH<Item> ITEMS = DeferredRegisterCoFH.create(ForgeRegistries.ITEMS, ID_OMGOURD);
@@ -41,11 +42,11 @@ public class OMGourd {
         BLOCKS.register(modEventBus);
         ITEMS.register(modEventBus);
 
-        OMGConfig.register();
+        CONFIG_MANAGER.register(modEventBus)
+                .addClientConfig(new OMGClientConfig());
+        CONFIG_MANAGER.setupClient();
 
         OMGBlocks.register();
-
-        CarvedPumpkinBlockCoFH.updatePredicate();
     }
 
     // region INITIALIZATION
@@ -56,7 +57,7 @@ public class OMGourd {
 
     private void clientSetup(final FMLClientSetupEvent event) {
 
-        if (OMGConfig.enableCreativeTab.get()) {
+        if (OMGClientConfig.enableCreativeTab.get()) {
             itemGroup = new CreativeModeTab(-1, ID_OMGOURD) {
 
                 @Override
