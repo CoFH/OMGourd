@@ -57,19 +57,21 @@ public class OMGourd {
 
     private void clientSetup(final FMLClientSetupEvent event) {
 
-        if (OMGClientConfig.enableCreativeTab.get()) {
-            itemGroup = new CreativeModeTab(-1, ID_OMGOURD) {
+        event.enqueueWork(() -> {
+            if (OMGClientConfig.enableCreativeTab.get()) {
+                itemGroup = new CreativeModeTab(-1, ID_OMGOURD) {
 
-                @Override
-                @OnlyIn (Dist.CLIENT)
-                public ItemStack makeIcon() {
+                    @Override
+                    @OnlyIn (Dist.CLIENT)
+                    public ItemStack makeIcon() {
 
-                    return new ItemStack(ITEMS.get("carved_pumpkin_1"));
-                }
-            };
-        } else {
-            itemGroup = CreativeModeTab.TAB_BUILDING_BLOCKS;
-        }
+                        return new ItemStack(ITEMS.get("carved_pumpkin_1"));
+                    }
+                };
+            } else {
+                itemGroup = CreativeModeTab.TAB_BUILDING_BLOCKS;
+            }
+        });
     }
     // endregion
 }
