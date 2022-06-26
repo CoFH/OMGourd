@@ -8,7 +8,7 @@ import net.minecraft.world.item.Items;
 
 import java.util.function.Consumer;
 
-import static cofh.lib.util.constants.Constants.ID_OMGOURD;
+import static cofh.lib.util.constants.ModIds.ID_OMGOURD;
 import static cofh.omgourd.OMGourd.ITEMS;
 
 public class OMGRecipeProvider extends RecipeProviderCoFH {
