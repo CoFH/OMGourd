@@ -51,12 +51,12 @@ public class CommonEvents {
         if (event.isCanceled()) {
             return;
         }
-        Level world = event.getWorld();
+        Level world = event.getLevel();
         Direction face = event.getFace();
         if (face == null) {
             return;
         }
-        Player player = event.getPlayer();
+        Player player = event.getEntity();
         BlockPos pos = event.getPos();
         Block block = world.getBlockState(pos).getBlock();
 
