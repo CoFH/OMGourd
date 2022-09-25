@@ -19,7 +19,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import static cofh.lib.util.constants.Constants.ID_OMGOURD;
+import static cofh.lib.util.constants.ModIds.ID_OMGOURD;
 
 @Mod (ID_OMGOURD)
 public class OMGourd {

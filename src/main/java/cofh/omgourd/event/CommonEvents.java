@@ -1,6 +1,6 @@
 package cofh.omgourd.event;
 
-import cofh.lib.item.impl.KnifeItem;
+import cofh.core.item.KnifeItem;
 import cofh.lib.util.Utils;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraft.core.BlockPos;
@@ -15,7 +15,7 @@ import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
-import static cofh.lib.util.constants.Constants.ID_OMGOURD;
+import static cofh.lib.util.constants.ModIds.ID_OMGOURD;
 
 @Mod.EventBusSubscriber (modid = ID_OMGOURD)
 public class CommonEvents {

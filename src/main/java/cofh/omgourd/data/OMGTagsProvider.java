@@ -6,7 +6,7 @@ import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
-import static cofh.lib.util.constants.Constants.ID_OMGOURD;
+import static cofh.lib.util.constants.ModIds.ID_OMGOURD;
 import static cofh.omgourd.OMGourd.BLOCKS;
 
 public class OMGTagsProvider {
