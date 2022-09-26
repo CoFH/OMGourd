@@ -1,6 +1,7 @@
 package cofh.omgourd.data;
 
-import cofh.lib.util.references.CoFHTags;
+import cofh.lib.tags.BlockTagsCoFH;
+import cofh.lib.tags.ItemTagsCoFH;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraft.data.tags.ItemTagsProvider;
@@ -27,7 +28,7 @@ public class OMGTagsProvider {
         @Override
         protected void addTags() {
 
-            tag(CoFHTags.Blocks.PUMPKINS_CARVED).add(
+            tag(BlockTagsCoFH.PUMPKINS_CARVED).add(
                     BLOCKS.get("carved_pumpkin_1"),
                     BLOCKS.get("carved_pumpkin_2"),
                     BLOCKS.get("carved_pumpkin_3"),
@@ -73,7 +74,7 @@ public class OMGTagsProvider {
         @Override
         protected void addTags() {
 
-            copy(CoFHTags.Blocks.PUMPKINS_CARVED, CoFHTags.Items.PUMPKINS_CARVED);
+            copy(BlockTagsCoFH.PUMPKINS_CARVED, ItemTagsCoFH.PUMPKINS_CARVED);
         }
 
     }
