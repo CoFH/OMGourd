@@ -1,6 +1,6 @@
 package cofh.omgourd;
 
-import cofh.lib.config.ConfigManager;
+import cofh.core.config.ConfigManager;
 import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.omgourd.config.OMGClientConfig;
 import cofh.omgourd.init.OMGBlocks;
