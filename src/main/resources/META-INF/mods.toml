@@ -27,7 +27,7 @@ side = "BOTH"
 [[dependencies.omgourd]]
 modId = "forge"
 mandatory = true
-versionRange = "[40.1.0,)"
+versionRange = "[40.1.76,)"
 ordering = "AFTER"
 side = "BOTH"
 
