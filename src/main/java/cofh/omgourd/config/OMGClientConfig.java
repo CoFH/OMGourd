@@ -17,11 +17,6 @@ public class OMGClientConfig implements IBaseConfig {
                 .define("Enable Item Group", true);
     }
 
-    @Override
-    public void refresh() {
-
-    }
-
     // region VARIABLES
     public static Supplier<Boolean> enableCreativeTab = TRUE;
     // endregion
