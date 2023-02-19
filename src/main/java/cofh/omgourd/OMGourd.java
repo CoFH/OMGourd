@@ -6,8 +6,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -30,7 +28,6 @@ public class OMGourd {
     public static final CreativeModeTab OMG_GROUP = new CreativeModeTab(-1, ID_OMGOURD) {
 
         @Override
-        @OnlyIn (Dist.CLIENT)
         public ItemStack makeIcon() {
 
             return new ItemStack(ITEMS.get("carved_pumpkin_1"));
