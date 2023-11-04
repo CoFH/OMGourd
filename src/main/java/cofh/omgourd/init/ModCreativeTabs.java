@@ -18,7 +18,7 @@ public class ModCreativeTabs {
 
     }
 
-    public static final RegistryObject<CreativeModeTab> TAB = CREATIVE_TABS.register(ID_OMGOURD, () -> CreativeModeTab.builder()
+    private static final RegistryObject<CreativeModeTab> TAB = CREATIVE_TABS.register(ID_OMGOURD, () -> CreativeModeTab.builder()
             .title(Component.translatable("itemGroup.omgourd"))
             .icon(() -> new ItemStack(ITEMS.get("carved_pumpkin_" + MIN_PUMPKIN_IDX)))
             .displayItems((parameters, output) -> ModBlocks.CREATIVE_TAB_ITEMS.forEach((item) -> output.accept(item.get())))
