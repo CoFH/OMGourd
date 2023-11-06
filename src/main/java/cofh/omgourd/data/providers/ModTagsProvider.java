@@ -24,6 +24,7 @@ public class ModTagsProvider {
             super(output, lookupProvider, ID_OMGOURD, existingFileHelper);
         }
 
+        @SuppressWarnings ("unchecked")
         @Override
         protected void addTags(HolderLookup.Provider pProvider) {
 
@@ -64,6 +65,7 @@ public class ModTagsProvider {
             super(pOutput, pLookupProvider, pBlockTags, ID_OMGOURD, existingFileHelper);
         }
 
+        @SuppressWarnings ("unchecked")
         @Override
         protected void addTags(HolderLookup.Provider pProvider) {
 
