@@ -1,9 +1,9 @@
-package cofh.omgourd.data;
+package cofh.omgourd.init.data;
 
-import cofh.omgourd.data.providers.ModItemModelProvider;
-import cofh.omgourd.data.providers.ModLootTableProvider;
-import cofh.omgourd.data.providers.ModRecipeProvider;
-import cofh.omgourd.data.providers.ModTagsProvider;
+import cofh.omgourd.init.data.providers.ModItemModelProvider;
+import cofh.omgourd.init.data.providers.ModLootTableProvider;
+import cofh.omgourd.init.data.providers.ModRecipeProvider;
+import cofh.omgourd.init.data.providers.ModTagsProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;

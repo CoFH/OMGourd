@@ -1,6 +1,6 @@
-package cofh.omgourd.data.providers;
+package cofh.omgourd.init.data.providers;
 
-import cofh.lib.data.RecipeProviderCoFH;
+import cofh.lib.init.data.RecipeProviderCoFH;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;

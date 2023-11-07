@@ -1,6 +1,6 @@
-package cofh.omgourd.data.tables;
+package cofh.omgourd.init.data.tables;
 
-import cofh.lib.data.loot.BlockLootSubProviderCoFH;
+import cofh.lib.init.data.loot.BlockLootSubProviderCoFH;
 
 import static cofh.omgourd.OMGourd.*;
 

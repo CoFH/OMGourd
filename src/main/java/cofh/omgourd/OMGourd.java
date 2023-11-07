@@ -1,9 +1,9 @@
 package cofh.omgourd;
 
-import cofh.core.event.CoreClientEvents;
+import cofh.core.client.event.CoreClientEvents;
 import cofh.lib.util.DeferredRegisterCoFH;
-import cofh.omgourd.init.ModBlocks;
-import cofh.omgourd.init.ModCreativeTabs;
+import cofh.omgourd.init.registries.ModBlocks;
+import cofh.omgourd.init.registries.ModCreativeTabs;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;

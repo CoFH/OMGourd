@@ -1,6 +1,6 @@
-package cofh.omgourd.data.providers;
+package cofh.omgourd.init.data.providers;
 
-import cofh.lib.data.ItemModelProviderCoFH;
+import cofh.lib.init.data.ItemModelProviderCoFH;
 import net.minecraft.data.PackOutput;
 import net.minecraftforge.common.data.ExistingFileHelper;
 

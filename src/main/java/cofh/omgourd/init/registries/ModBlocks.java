@@ -1,8 +1,8 @@
-package cofh.omgourd.init;
+package cofh.omgourd.init.registries;
 
-import cofh.core.block.CarvedPumpkinBlockCoFH;
-import cofh.core.block.EquipableCarvedPumpkinBlockCoFH;
-import cofh.core.item.BlockItemCoFH;
+import cofh.core.common.block.CarvedPumpkinBlockCoFH;
+import cofh.core.common.block.EquipableCarvedPumpkinBlockCoFH;
+import cofh.core.common.item.BlockItemCoFH;
 import cofh.lib.util.helpers.BlockHelper;
 import com.google.common.collect.Sets;
 import net.minecraft.world.item.Item;
@@ -18,8 +18,8 @@ import java.util.LinkedHashSet;
 import java.util.function.Supplier;
 
 import static cofh.omgourd.OMGourd.*;
-import static cofh.omgourd.event.CommonEvents.registerNext;
-import static cofh.omgourd.event.CommonEvents.registerPrev;
+import static cofh.omgourd.common.event.CommonEvents.registerNext;
+import static cofh.omgourd.common.event.CommonEvents.registerPrev;
 import static net.minecraft.world.level.block.state.BlockBehaviour.Properties.of;
 
 public class ModBlocks {

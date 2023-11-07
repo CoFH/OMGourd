@@ -1,4 +1,4 @@
-package cofh.omgourd.init;
+package cofh.omgourd.init.registries;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;

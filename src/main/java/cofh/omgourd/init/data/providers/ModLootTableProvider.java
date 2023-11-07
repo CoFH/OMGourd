@@ -1,7 +1,7 @@
-package cofh.omgourd.data.providers;
+package cofh.omgourd.init.data.providers;
 
-import cofh.lib.data.LootTableProviderCoFH;
-import cofh.omgourd.data.tables.ModBlockLootTables;
+import cofh.lib.init.data.LootTableProviderCoFH;
+import cofh.omgourd.init.data.tables.ModBlockLootTables;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 

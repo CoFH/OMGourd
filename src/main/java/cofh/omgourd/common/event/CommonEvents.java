@@ -1,6 +1,6 @@
-package cofh.omgourd.event;
+package cofh.omgourd.common.event;
 
-import cofh.core.item.KnifeItem;
+import cofh.core.common.item.KnifeItem;
 import cofh.lib.util.Utils;
 import it.unimi.dsi.fastutil.objects.Object2ObjectOpenHashMap;
 import net.minecraft.core.BlockPos;
