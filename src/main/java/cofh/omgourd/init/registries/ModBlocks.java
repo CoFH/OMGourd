@@ -17,6 +17,7 @@ import net.minecraftforge.registries.RegistryObject;
 import java.util.LinkedHashSet;
 import java.util.function.Supplier;
 
+import static cofh.lib.util.Utils.itemProperties;
 import static cofh.omgourd.OMGourd.*;
 import static cofh.omgourd.common.event.CommonEvents.registerNext;
 import static cofh.omgourd.common.event.CommonEvents.registerPrev;
@@ -44,8 +45,8 @@ public class ModBlocks {
             BLOCKS.register("jack_o_lantern_" + i, () -> new CarvedPumpkinBlockCoFH(of().mapColor(MapColor.COLOR_ORANGE).instrument(NoteBlockInstrument.DIDGERIDOO).strength(1.0F).sound(SoundType.WOOD).pushReaction(PushReaction.DESTROY).lightLevel(BlockHelper.lightValue(15))).setTranslationKey("block.minecraft.jack_o_lantern"));
 
             final int j = i;
-            registerWithTab("carved_pumpkin_" + j, () -> new BlockItemCoFH(BLOCKS.get("carved_pumpkin_" + j), new Item.Properties()));
-            registerWithTab("jack_o_lantern_" + j, () -> new BlockItemCoFH(BLOCKS.get("jack_o_lantern_" + j), new Item.Properties()));
+            registerWithTab("carved_pumpkin_" + j, () -> new BlockItemCoFH(BLOCKS.get("carved_pumpkin_" + j), itemProperties()));
+            registerWithTab("jack_o_lantern_" + j, () -> new BlockItemCoFH(BLOCKS.get("jack_o_lantern_" + j), itemProperties()));
         }
         CarvedPumpkinBlockCoFH.updatePredicate();
     }
