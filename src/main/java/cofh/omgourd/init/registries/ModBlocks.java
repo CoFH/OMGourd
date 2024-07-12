@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
-import net.neoforged.neoforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.LinkedHashSet;
 import java.util.function.Supplier;
@@ -29,11 +29,11 @@ public class ModBlocks {
 
     }
 
-    public static LinkedHashSet<RegistryObject<Item>> CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
+    public static LinkedHashSet<DeferredHolder<Item, Item>> CREATIVE_TAB_ITEMS = Sets.newLinkedHashSet();
 
-    public static RegistryObject<Item> registerWithTab(final String name, final Supplier<Item> supplier) {
+    public static DeferredHolder<Item, Item> registerWithTab(final String name, final Supplier<Item> supplier) {
 
-        RegistryObject<Item> reg = ITEMS.register(name, supplier);
+        DeferredHolder<Item, Item> reg = ITEMS.register(name, supplier);
         CREATIVE_TAB_ITEMS.add(reg);
         return reg;
     }

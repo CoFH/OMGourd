@@ -4,18 +4,18 @@ import cofh.core.client.event.CoreClientEvents;
 import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.omgourd.init.registries.ModBlocks;
 import cofh.omgourd.init.registries.ModCreativeTabs;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.neoforged.neoforge.registries.ForgeRegistries;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 
 import static cofh.lib.util.constants.ModIds.ID_OMGOURD;
 
@@ -28,13 +28,11 @@ public class OMGourd {
     // public static final Logger LOG = LogManager.getLogger(ID_OMGOURD);
     // public static final ConfigManager CONFIG_MANAGER = new ConfigManager();
 
-    public static final DeferredRegisterCoFH<Block> BLOCKS = DeferredRegisterCoFH.create(ForgeRegistries.BLOCKS, ID_OMGOURD);
-    public static final DeferredRegisterCoFH<Item> ITEMS = DeferredRegisterCoFH.create(ForgeRegistries.ITEMS, ID_OMGOURD);
+    public static final DeferredRegisterCoFH<Block> BLOCKS = DeferredRegisterCoFH.create(BuiltInRegistries.BLOCK, ID_OMGOURD);
+    public static final DeferredRegisterCoFH<Item> ITEMS = DeferredRegisterCoFH.create(BuiltInRegistries.ITEM, ID_OMGOURD);
     public static final DeferredRegisterCoFH<CreativeModeTab> CREATIVE_TABS = DeferredRegisterCoFH.create(Registries.CREATIVE_MODE_TAB, ID_OMGOURD);
 
-    public OMGourd() {
-
-        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+    public OMGourd(ModContainer modContainer, IEventBus modEventBus) {
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);
