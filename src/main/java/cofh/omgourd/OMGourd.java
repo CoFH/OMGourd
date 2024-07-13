@@ -5,7 +5,6 @@ import cofh.lib.util.DeferredRegisterCoFH;
 import cofh.omgourd.init.registries.ModBlocks;
 import cofh.omgourd.init.registries.ModCreativeTabs;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.Item;
@@ -30,7 +29,7 @@ public class OMGourd {
 
     public static final DeferredRegisterCoFH<Block> BLOCKS = DeferredRegisterCoFH.create(BuiltInRegistries.BLOCK, ID_OMGOURD);
     public static final DeferredRegisterCoFH<Item> ITEMS = DeferredRegisterCoFH.create(BuiltInRegistries.ITEM, ID_OMGOURD);
-    public static final DeferredRegisterCoFH<CreativeModeTab> CREATIVE_TABS = DeferredRegisterCoFH.create(Registries.CREATIVE_MODE_TAB, ID_OMGOURD);
+    public static final DeferredRegisterCoFH<CreativeModeTab> CREATIVE_TABS = DeferredRegisterCoFH.create(BuiltInRegistries.CREATIVE_MODE_TAB, ID_OMGOURD);
 
     public OMGourd(ModContainer modContainer, IEventBus modEventBus) {
 
